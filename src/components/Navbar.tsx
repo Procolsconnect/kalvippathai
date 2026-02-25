@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="bg-card shadow-md sticky top-0 z-50 animate-slide-down">
       <nav className="max-w-[1400px] mx-auto px-5 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-full bg-card flex items-center justify-center border border-border overflow-hidden">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-card flex items-center justify-center border border-border overflow-hidden transition-all duration-300">
             <img
               src="/kalvippaathai.jpeg"
               alt="Kalvippaathai logo"
