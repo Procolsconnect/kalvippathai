@@ -21,11 +21,11 @@ const CTASection = () => (
           Apply Now for 2025-26
         </a>
         <a
-          href="tel:+919600581759"
+          href="tel:+91 99523 17770"
           className="border-2 border-primary text-primary px-10 py-4 rounded-full font-bold text-base font-body hover:bg-primary hover:text-primary-foreground transition-all flex items-center gap-2"
         >
           <Phone className="w-5 h-5" strokeWidth={1.5} />
-          Call: +91 96005 81759
+          Call:  99523 17770
         </a>
       </div>
     </motion.div>

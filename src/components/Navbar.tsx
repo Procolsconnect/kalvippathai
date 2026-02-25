@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,8 +17,12 @@ const Navbar = () => {
     <header className="bg-card shadow-md sticky top-0 z-50 animate-slide-down">
       <nav className="max-w-[1400px] mx-auto px-5 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-full gradient-primary flex items-center justify-center">
-            <GraduationCap className="w-8 h-8 text-secondary" strokeWidth={1.5} />
+          <div className="w-14 h-14 rounded-full bg-card flex items-center justify-center border border-border overflow-hidden">
+            <img
+              src="/kalvippaathai.jpeg"
+              alt="Kalvippaathai logo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <h1 className="text-xl md:text-2xl text-primary font-display">BCAS</h1>
