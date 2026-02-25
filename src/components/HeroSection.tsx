@@ -2,15 +2,41 @@ import { useState } from "react";
 import { CheckCircle, Trophy, BookOpen, Briefcase, BadgeDollarSign, GraduationCap, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyIoL5MQoj-ltrc05z4kMKce0BnT7LadzV3tPj3XqauFrx_SgjmkyOrSJose6MBThKr/exec";
+
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     studentName: "", phone: "", email: "", course: "", qualification: "", city: "", message: "",
   });
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMsg = `New Admission Enquiry:\nName: ${formData.studentName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nCourse: ${formData.course}\nQualification: ${formData.qualification}\nCity: ${formData.city}\nMessage: ${formData.message}`;
-    window.open(`https://wa.me/919600581759?text=${encodeURIComponent(whatsappMsg)}`, "_blank");
+    setSubmitStatus("submitting");
+
+    try {
+      await fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setFormData({
+        studentName: "",
+        phone: "",
+        email: "",
+        course: "",
+        qualification: "",
+        city: "",
+        message: "",
+      });
+      setSubmitStatus("success");
+    } catch (error) {
+      setSubmitStatus("error");
+    }
   };
 
   const badges = [
@@ -200,11 +226,19 @@ const HeroSection = () => {
 
             <button
               type="submit"
-              className="w-full gradient-gold text-secondary-foreground py-4 rounded-lg font-bold text-base font-body transition-all hover:-translate-y-0.5 hover:shadow-lg flex items-center justify-center gap-2"
+              disabled={submitStatus === "submitting"}
+              className="w-full gradient-gold text-secondary-foreground py-4 rounded-lg font-bold text-base font-body transition-all hover:-translate-y-0.5 hover:shadow-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               <Rocket className="w-5 h-5" strokeWidth={1.5} />
-              Submit Application
+              {submitStatus === "submitting" ? "Submitting..." : "Submit Application"}
             </button>
+
+            {submitStatus === "success" && (
+              <p className="text-green-900 text-sm font-body text-center">Thanks! Your application was submitted.</p>
+            )}
+            {submitStatus === "error" && (
+              <p className="text-red-600 text-sm font-body text-center">Something went wrong. Please try again.</p>
+            )}
           </form>
         </motion.div>
       </div>
