@@ -54,7 +54,7 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 px-5 bg-muted">
+    <section className="py-20 px-5 bg-muted overflow-hidden">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <p className="text-gold font-bold text-sm tracking-widest uppercase mb-4 font-body">Have Questions?</p>
         <h2 className="text-3xl lg:text-5xl text-primary mb-5 font-display">Frequently Asked Questions</h2>

@@ -32,7 +32,7 @@ const featureColumns = [
 ];
 
 const InfrastructureSection = () => (
-  <section className="py-20 px-5 bg-card">
+  <section className="py-20 px-5 bg-card overflow-hidden">
     <div className="text-center max-w-3xl mx-auto mb-16">
       <p className="text-gold font-bold text-sm tracking-widest uppercase mb-4 font-body">World-Class Facilities</p>
       <h2 className="text-3xl lg:text-5xl text-primary mb-5 font-display">Campus Infrastructure</h2>

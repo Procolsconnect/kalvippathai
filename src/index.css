@@ -65,12 +65,17 @@
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background text-foreground;
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     line-height: 1.2;
@@ -81,24 +86,30 @@
   .gradient-primary {
     background: var(--gradient-primary);
   }
+
   .gradient-gold {
     background: var(--gradient-gold);
   }
+
   .gradient-orange {
     background: var(--gradient-orange);
   }
+
   .gradient-sky {
     background: var(--gradient-sky);
   }
+
   .text-gradient-gold {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
   .font-body {
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
+
   .font-display {
     font-family: 'Playfair Display', serif;
   }

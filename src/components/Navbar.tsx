@@ -16,17 +16,17 @@ const Navbar = () => {
   return (
     <header className="bg-card shadow-md sticky top-0 z-50 animate-slide-down">
       <nav className="max-w-[1400px] mx-auto px-5 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-card flex items-center justify-center border border-border overflow-hidden transition-all duration-300">
+        <div className="flex items-center gap-4 min-w-0 flex-1">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-card flex items-center justify-center border border-border overflow-hidden transition-all duration-300 flex-shrink-0">
             <img
               src="/kalvippaathai.jpeg"
               alt="Kalvippaathai logo"
               className="w-full h-full object-contain"
             />
           </div>
-          <div>
-            <h1 className="text-xl md:text-2xl text-primary font-display">BCAS</h1>
-            <p className="text-xs text-muted-foreground font-body">Bharathidasan College of Arts and Science</p>
+          <div className="min-w-0 flex-1">
+            <h1 className="text-xl md:text-2xl text-primary font-display truncate">BCAS</h1>
+            <p className="text-[10px] sm:text-xs text-muted-foreground font-body truncate sm:whitespace-normal">Bharathidasan College of Arts and Science</p>
           </div>
         </div>
 

@@ -23,7 +23,7 @@ const companyLogos = [
 ];
 
 const PlacementSection = () => (
-  <section className="py-20 px-5 bg-card" id="placement">
+  <section className="py-20 px-5 bg-card overflow-hidden" id="placement">
     <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}

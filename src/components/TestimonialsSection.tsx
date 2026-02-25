@@ -23,7 +23,7 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="py-20 px-5 gradient-primary">
+  <section className="py-20 px-5 gradient-primary overflow-hidden">
     <div className="text-center max-w-3xl mx-auto mb-16">
       <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-4 font-body">Student Success Stories</p>
       <h2 className="text-3xl lg:text-5xl text-primary-foreground mb-5 font-display">What Our Students Say</h2>
