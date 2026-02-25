@@ -12,6 +12,7 @@
     height: auto;
     padding: 6rem 1rem;
     overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 

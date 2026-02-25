@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Medal, Sparkles } from "lucide-react";
 
 const ScholarshipSection = () => (
-  <section className="py-20 px-5 bg-gradient-to-br from-muted to-accent/10">
+  <section className="py-20 px-5 bg-gradient-to-br from-muted to-accent/10 overflow-x-hidden">
     <div className="text-center max-w-3xl mx-auto mb-16">
       <p className="text-gold font-bold text-sm tracking-widest uppercase mb-4 font-body">Financial Support</p>
       <h2 className="text-3xl lg:text-5xl text-primary mb-5 font-display">Talent Based Scholarship - Supporting Dreams</h2>

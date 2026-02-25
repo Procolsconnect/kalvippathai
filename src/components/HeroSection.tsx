@@ -48,7 +48,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 px-5" id="home">
+    <section className="relative overflow-hidden overflow-x-hidden py-16 md:py-24 px-5" id="home">
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=80"

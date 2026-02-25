@@ -36,7 +36,7 @@ const features = [
 ];
 
 const FeaturesSection = () => (
-  <section className="py-20 px-5 bg-muted" id="about">
+  <section className="py-20 px-5 bg-muted overflow-x-hidden" id="about">
     <div className="text-center max-w-3xl mx-auto mb-16">
       <p className="text-secondary-foreground font-bold text-sm tracking-widest uppercase mb-4 font-body text-gold">Why Choose Us</p>
       <h2 className="text-3xl lg:text-5xl text-primary mb-5 font-display">Exceptional Learning Experience</h2>

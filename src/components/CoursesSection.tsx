@@ -112,7 +112,7 @@ const CategoryHeader = ({ icon: Icon, title, badge }: { icon: React.ElementType;
 );
 
 const CoursesSection = () => (
-  <section className="py-20 px-5 bg-card" id="courses">
+  <section className="py-20 px-5 bg-card overflow-x-hidden" id="courses">
     <div className="text-center max-w-3xl mx-auto mb-16">
       <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-4 font-body">Admission 2025 Open</p>
       <h2 className="text-3xl lg:text-5xl text-primary mb-5 font-display">12 UG Programs + 7 PG Programs + 3 Ph.D Courses</h2>
