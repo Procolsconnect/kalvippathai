@@ -4,6 +4,8 @@
   border-bottom: 1px solid rgba(247, 242, 232, 0.16);
   font-family: "Playfair Display", "Times New Roman", serif;
   letter-spacing: 0.2px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .link {
@@ -15,9 +17,11 @@
 
 .inner {
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding: 0.55rem 1.25rem;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .track {
