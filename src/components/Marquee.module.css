@@ -1,0 +1,151 @@
+/* ================= MARQUEE SECTION ================= */
+.marqueeSection {
+    padding: 2rem 2rem 3rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowContainer {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.marqueeRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #08224c;
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    min-width: 200px;
+    min-height: 100px;
+    color: #fff;
+}
+
+.marqueeRow:first-child {
+    flex: 2;
+}
+
+.marqueeRow:last-child {
+    flex: 1.5;
+}
+
+.textContent {
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.marquee {
+    --hov: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+    padding: 1rem 2.5em;
+    border: 3px solid #FFD700;
+    border-radius: 60px;
+    background: #fff;
+    color: #002868;
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.animate {
+    animation: marquee 2s linear infinite;
+}
+
+.marquee:hover {
+    --hov: 1;
+}
+
+.marquee:focus-visible {
+    box-shadow: 0 0 0 3px #FFD700;
+}
+
+@keyframes marquee {
+    to {
+        text-indent: -100%;
+    }
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+/* TABLET (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .marqueeSection {
+        padding: 1.5rem 1.5rem 4rem;
+    }
+
+    .rowContainer {
+        gap: 2.5rem;
+        max-width: 100%;
+    }
+
+    .marqueeRow {
+        padding: 1.2rem 2.5rem;
+        min-height: 90px;
+    }
+
+    .textContent {
+        font-size: 1rem;
+    }
+
+    .marquee {
+        font-size: 1rem;
+        padding: 0.9em 2.2em;
+    }
+}
+
+/* MOBILE (< 768px) */
+@media (max-width: 768px) {
+    .marqueeSection {
+        padding: 1rem 1rem 3rem;
+    }
+
+    .rowContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .marqueeRow {
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 1.2rem;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .marqueeRow:first-child,
+    .marqueeRow:last-child {
+        flex: 1;
+    }
+
+    .textContent {
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .marquee {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.5rem;
+        width: auto;
+        min-width: 140px;
+        max-width: 100%;
+        border-width: 2px;
+    }
+}
+
+/* DESKTOP (> 1024px) - Original design maintained */
+@media (min-width: 1025px) {
+    /* Desktop styles already defined above */
+}
