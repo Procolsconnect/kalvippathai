@@ -1,57 +1,175 @@
 import { motion } from "framer-motion";
 import { Monitor, Landmark, ShoppingCart, Factory } from "lucide-react";
 
+// Using multiple fallback logo sources for guaranteed visibility
 const categories = [
   {
     icon: Monitor,
     title: "IT & Software Companies",
     logos: [
-      { name: "TCS", url: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" },
-      { name: "Infosys", url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" },
-      { name: "Wipro", url: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" },
-      { name: "Cognizant", url: "https://upload.wikimedia.org/wikipedia/commons/4/46/Cognizant_logo_2022.svg" },
-      { name: "Accenture", url: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Accenture_logo.svg" },
-      { name: "HCL", url: "https://upload.wikimedia.org/wikipedia/commons/8/87/HCL_Tech_Bee_logo.svg" },
-      { name: "Capgemini", url: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Capgemini_201x_logo.svg" },
-      { name: "Zoho", url: "https://upload.wikimedia.org/wikipedia/commons/5/50/Zoho_Corporation_logo.svg" },
-      { name: "Freshworks", url: "https://upload.wikimedia.org/wikipedia/commons/3/33/Freshworks_logo.svg" },
-      { name: "Mphasis", url: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Mphasis_logo.svg" },
-      { name: "Tech Mahindra", url: "https://upload.wikimedia.org/wikipedia/commons/9/93/Tech_Mahindra_New_Logo.svg" },
-      { name: "LTI", url: "https://upload.wikimedia.org/wikipedia/commons/b/b3/L%26T_Infotech_Logo.svg" },
+      {
+        name: "TCS", link: "https://www.tcs.com", abbr: "TCS", color: "#1a1a4b",
+        logo: "https://www.google.com/s2/favicons?domain=tcs.com&sz=128"
+      },
+      {
+        name: "Infosys", link: "https://www.infosys.com", abbr: "INFY", color: "#007cc2",
+        logo: "https://www.google.com/s2/favicons?domain=infosys.com&sz=128"
+      },
+      {
+        name: "Wipro", link: "https://www.wipro.com", abbr: "WIPRO", color: "#341f5e",
+        logo: "https://www.google.com/s2/favicons?domain=wipro.com&sz=128"
+      },
+      {
+        name: "Cognizant", link: "https://www.cognizant.com", abbr: "CTS", color: "#1d2e6e",
+        logo: "https://www.google.com/s2/favicons?domain=cognizant.com&sz=128"
+      },
+      {
+        name: "Accenture", link: "https://www.accenture.com", abbr: "ACN", color: "#a100ff",
+        logo: "https://www.google.com/s2/favicons?domain=accenture.com&sz=128"
+      },
+      {
+        name: "HCL Tech", link: "https://www.hcltech.com", abbr: "HCL", color: "#0069b4",
+        logo: "https://www.google.com/s2/favicons?domain=hcltech.com&sz=128"
+      },
+      {
+        name: "Capgemini", link: "https://www.capgemini.com", abbr: "CGI", color: "#003399",
+        logo: "https://www.google.com/s2/favicons?domain=capgemini.com&sz=128"
+      },
+      {
+        name: "Zoho", link: "https://www.zoho.com", abbr: "ZOHO", color: "#e42527",
+        logo: "https://www.google.com/s2/favicons?domain=zoho.com&sz=128"
+      },
+      {
+        name: "Freshworks", link: "https://www.freshworks.com", abbr: "FW", color: "#25c16f",
+        logo: "https://www.google.com/s2/favicons?domain=freshworks.com&sz=128"
+      },
+      {
+        name: "Mphasis", link: "https://www.mphasis.com", abbr: "MPS", color: "#e8b000",
+        logo: "https://www.google.com/s2/favicons?domain=mphasis.com&sz=128"
+      },
+      {
+        name: "Tech Mahindra", link: "https://www.techmahindra.com", abbr: "TM", color: "#e5002b",
+        logo: "https://www.google.com/s2/favicons?domain=techmahindra.com&sz=128"
+      },
+      {
+        name: "LTI Mindtree", link: "https://www.ltimindtree.com", abbr: "LTI", color: "#004c8e",
+        logo: "https://www.google.com/s2/favicons?domain=ltimindtree.com&sz=128"
+      },
     ],
   },
   {
     icon: Landmark,
     title: "Banking & Finance",
     logos: [
-      { name: "ICICI Bank", url: "https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" },
-      { name: "HDFC Bank", url: "https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" },
-      { name: "Axis Bank", url: "https://upload.wikimedia.org/wikipedia/en/8/8b/Axis_Bank_logo.svg" },
-      { name: "SBI", url: "https://upload.wikimedia.org/wikipedia/en/1/1f/State_Bank_of_India_logo.svg" },
-      { name: "Kotak Mahindra", url: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Kotak_Mahindra_Bank_logo.svg" },
-      { name: "IndusInd Bank", url: "https://upload.wikimedia.org/wikipedia/commons/c/cc/IndusInd_Bank_Logo.svg" },
+      {
+        name: "ICICI Bank", link: "https://www.icicibank.com", abbr: "ICICI", color: "#f47920",
+        logo: "https://www.google.com/s2/favicons?domain=icicibank.com&sz=128"
+      },
+      {
+        name: "HDFC Bank", link: "https://www.hdfcbank.com", abbr: "HDFC", color: "#004c8f",
+        logo: "https://www.google.com/s2/favicons?domain=hdfcbank.com&sz=128"
+      },
+      {
+        name: "Axis Bank", link: "https://www.axisbank.com", abbr: "AXIS", color: "#97144d",
+        logo: "https://www.google.com/s2/favicons?domain=axisbank.com&sz=128"
+      },
+      {
+        name: "SBI", link: "https://www.sbi.co.in", abbr: "SBI", color: "#2e4089",
+        logo: "https://www.google.com/s2/favicons?domain=sbi.co.in&sz=128"
+      },
+      {
+        name: "Kotak Bank", link: "https://www.kotak.com", abbr: "KMB", color: "#ed1c24",
+        logo: "https://www.google.com/s2/favicons?domain=kotak.com&sz=128"
+      },
+      {
+        name: "IndusInd Bank", link: "https://www.indusind.com", abbr: "IND", color: "#046a38",
+        logo: "https://www.google.com/s2/favicons?domain=indusind.com&sz=128"
+      },
     ],
   },
   {
     icon: ShoppingCart,
     title: "E-commerce & Startups",
     logos: [
-      { name: "Amazon", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-      { name: "Flipkart", url: "https://upload.wikimedia.org/wikipedia/en/1/11/Flipkart_logo.png" },
-      { name: "Paytm", url: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Paytm_logo.svg" },
+      {
+        name: "Amazon", link: "https://www.amazon.in", abbr: "AMZ", color: "#ff9900",
+        logo: "https://www.google.com/s2/favicons?domain=amazon.com&sz=128"
+      },
+      {
+        name: "Flipkart", link: "https://www.flipkart.com", abbr: "FK", color: "#2874f0",
+        logo: "https://www.google.com/s2/favicons?domain=flipkart.com&sz=128"
+      },
+      {
+        name: "Paytm", link: "https://www.paytm.com", abbr: "PTM", color: "#00b9f5",
+        logo: "https://www.google.com/s2/favicons?domain=paytm.com&sz=128"
+      },
     ],
   },
   {
     icon: Factory,
     title: "Manufacturing & Others",
     logos: [
-      { name: "Tata Motors", url: "https://upload.wikimedia.org/wikipedia/commons/9/99/Tata_Motors_Logo.svg" },
-      { name: "Samsung", url: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" },
-      { name: "IBM", url: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-      { name: "Deloitte", url: "https://upload.wikimedia.org/wikipedia/commons/3/36/Deloitte.svg" },
+      {
+        name: "Tata Motors", link: "https://www.tatamotors.com", abbr: "TATA", color: "#003580",
+        logo: "https://www.google.com/s2/favicons?domain=tatamotors.com&sz=128"
+      },
+      {
+        name: "Samsung", link: "https://www.samsung.com/in", abbr: "SAM", color: "#1428a0",
+        logo: "https://www.google.com/s2/favicons?domain=samsung.com&sz=128"
+      },
+      {
+        name: "IBM", link: "https://www.ibm.com", abbr: "IBM", color: "#0530ad",
+        logo: "https://www.google.com/s2/favicons?domain=ibm.com&sz=128"
+      },
+      {
+        name: "Deloitte", link: "https://www.deloitte.com", abbr: "DLT", color: "#86bc25",
+        logo: "https://www.google.com/s2/favicons?domain=deloitte.com&sz=128"
+      },
     ],
   },
 ];
+
+const LogoCard = ({ logo }: { logo: (typeof categories)[0]["logos"][0] }) => {
+  return (
+    <motion.a
+      href={logo.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ y: -6, scale: 1.05 }}
+      className="bg-card p-4 rounded-2xl flex flex-col items-center justify-center gap-2 h-28 shadow-md border border-border hover:border-secondary hover:shadow-xl transition-all cursor-pointer group"
+      title={`Visit ${logo.name}`}
+    >
+      {/* Colored branded icon box with favicon */}
+      <div
+        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+        style={{ backgroundColor: logo.color }}
+      >
+        <img
+          src={logo.logo}
+          alt={logo.name}
+          className="w-8 h-8 object-contain"
+          onError={(e) => {
+            // fallback: show white abbreviation text on brand color bg
+            const img = e.currentTarget;
+            img.style.display = "none";
+            const span = img.nextElementSibling as HTMLElement;
+            if (span) span.style.display = "block";
+          }}
+        />
+        <span
+          style={{ display: "none" }}
+          className="text-white text-[9px] font-black font-body text-center leading-none"
+        >
+          {logo.abbr}
+        </span>
+      </div>
+      {/* Company name */}
+      <span className="text-[11px] font-semibold text-foreground font-body text-center leading-tight group-hover:text-primary transition-colors line-clamp-2 w-full px-1">
+        {logo.name}
+      </span>
+    </motion.a>
+  );
+};
 
 const CompaniesSection = () => (
   <section className="py-20 px-5 bg-card overflow-hidden">
@@ -70,15 +188,9 @@ const CompaniesSection = () => (
               <Icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
               {cat.title}
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
               {cat.logos.map((logo) => (
-                <motion.div
-                  key={logo.name}
-                  whileHover={{ y: -8, scale: 1.05 }}
-                  className="bg-card p-5 rounded-2xl flex items-center justify-center h-24 shadow-md border border-border hover:border-secondary transition-all"
-                >
-                  <img src={logo.url} alt={logo.name} className="max-w-full max-h-14 object-contain grayscale-[20%] hover:grayscale-0 transition-all" />
-                </motion.div>
+                <LogoCard key={logo.name} logo={logo} />
               ))}
             </div>
           </div>

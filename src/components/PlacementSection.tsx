@@ -8,17 +8,17 @@ const stats = [
 ];
 
 const companyLogos = [
-  { name: "TCS", url: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" },
+  { name: "TCS", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/250px-Tata_Consultancy_Services_Logo.svg.png" },
   { name: "Wipro", url: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" },
   { name: "Infosys", url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" },
-  { name: "Cognizant", url: "https://upload.wikimedia.org/wikipedia/commons/4/46/Cognizant_logo_2022.svg" },
-  { name: "Accenture", url: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Accenture_logo.svg" },
-  { name: "HCL", url: "https://upload.wikimedia.org/wikipedia/commons/8/87/HCL_Tech_Bee_logo.svg" },
+  { name: "Cognizant", url: "https://www.google.com/s2/favicons?domain=cognizant.com&sz=128" },
+  { name: "Accenture", url: "https://www.google.com/s2/favicons?domain=accenture.com&sz=128" },
+  { name: "HCL", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/HCL_Technologies_Logo_%28brand_refresh_2022%29.svg/250px-HCL_Technologies_Logo_%28brand_refresh_2022%29.svg.png" },
   { name: "ICICI Bank", url: "https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" },
   { name: "HDFC Bank", url: "https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" },
   { name: "Amazon", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-  { name: "Zoho", url: "https://upload.wikimedia.org/wikipedia/commons/5/50/Zoho_Corporation_logo.svg" },
-  { name: "Freshworks", url: "https://upload.wikimedia.org/wikipedia/commons/3/33/Freshworks_logo.svg" },
+  { name: "Zoho", url: "https://www.google.com/s2/favicons?domain=zoho.com&sz=128" },
+  { name: "Freshworks", url: "https://www.google.com/s2/favicons?domain=freshworks.com&sz=128" },
   { name: "IBM", url: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
 ];
 
@@ -63,7 +63,18 @@ const PlacementSection = () => (
               key={c.name}
               className="bg-card p-4 rounded-xl flex items-center justify-center h-20 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
             >
-              <img src={c.url} alt={c.name} className="max-w-full max-h-12 object-contain grayscale hover:grayscale-0 transition-all" />
+              <img
+                src={c.url}
+                alt={c.name}
+                className="max-w-full max-h-12 object-contain grayscale hover:grayscale-0 transition-all"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  img.style.display = "none";
+                  const span = img.nextElementSibling as HTMLElement;
+                  if (span) span.style.display = "flex";
+                }}
+              />
+              <span style={{ display: "none" }} className="text-xs font-bold text-primary font-body text-center items-center justify-center">{c.name}</span>
             </div>
           ))}
         </div>
