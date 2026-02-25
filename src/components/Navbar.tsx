@@ -21,7 +21,7 @@ const Navbar = () => {
             <img
               src="/kalvippaathai.jpeg"
               alt="Kalvippaathai logo"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <div>
