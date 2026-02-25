@@ -10,8 +10,8 @@ export default function Footer() {
             <i className="fa-solid fa-mobile-screen-button"></i>
           </div>
           <span>MOBILE</span>
-          <strong>+91 63845 55533</strong>
-          <strong>+91 63845 55511</strong>
+          <strong>+91 99523 17770</strong>
+          <strong>+91 98658 67789</strong>
         </div>
 
         <div className={styles.footerBox}>
@@ -19,8 +19,8 @@ export default function Footer() {
             <i className="fa-solid fa-phone"></i>
           </div>
           <span>PHONE</span>
-          <strong>+91 422 3501700</strong>
-          <strong>+91 422 2363400</strong>
+          <strong>+91 99523 17770</strong>
+          <strong>+91 98658 67789</strong>
         </div>
 
         <div className={styles.footerBox}>
@@ -28,7 +28,7 @@ export default function Footer() {
             <i className="fa-regular fa-envelope"></i>
           </div>
           <span>EMAIL</span>
-          <strong>admission@svasc.com</strong>
+          <strong>kathirvel64@gmail.com</strong>
         </div>
       </div>
 

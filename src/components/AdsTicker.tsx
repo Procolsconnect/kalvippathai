@@ -32,8 +32,13 @@ const AdsTicker = () => {
   const loopItems = [...items, ...items];
 
   return (
-    <div className={styles.bar} aria-label="Admissions advertisement">
-      <div className={styles.inner}>
+    <a
+      className={styles.link}
+      href="https://svasc.vercel.app/admission"
+      aria-label="Admissions advertisement"
+    >
+      <div className={styles.bar}>
+        <div className={styles.inner}>
         <div className={styles.track}>
           {loopItems.map((item, index) => (
             <div className={styles.item} key={`${item.badge}-${index}`}>
@@ -43,8 +48,9 @@ const AdsTicker = () => {
             </div>
           ))}
         </div>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -6,6 +6,13 @@
   letter-spacing: 0.2px;
 }
 
+.link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .inner {
   max-width: 1400px;
   margin: 0 auto;

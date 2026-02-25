@@ -20,26 +20,28 @@ const Marquee = () => {
         <div className={styles.marqueeSection}>
             <div className={styles.rowContainer}>
                 <div className={styles.marqueeRow}>
-                    <div className={styles.textContent}>Fees Enquiry</div>
-                    <button
+                    <div className={styles.textContent}>Free Enquiry Call</div>
+                    <a
                         className={styles.marquee}
+                        href="tel:+919952317770"
                         onPointerOver={handlePointerOver}
                         onPointerOut={handlePointerOut}
-                        onClick={(e) => handleClick(e.target.textContent)}
                     >
-                        Limited Seats
-                    </button>
+                        +91 99523 17770
+                    </a>
                 </div>
                 <div className={styles.marqueeRow}>
                     <div className={styles.textContent}>Scholarship Eligibility</div>
-                    <button
+                    <a
                         className={styles.marquee}
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdJ8N-zgjLuzZrj1q4CCmm3P3fXc4m6Ed2wHZAW50bL02WXlg/viewform?usp=publish-editor"
+                        target="_blank"
+                        rel="noreferrer"
                         onPointerOver={handlePointerOver}
                         onPointerOut={handlePointerOut}
-                        onClick={(e) => handleClick(e.target.textContent)}
                     >
                         Click Here
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
