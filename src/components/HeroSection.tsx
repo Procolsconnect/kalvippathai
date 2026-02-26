@@ -65,7 +65,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-3xl sm:text-4xl lg:text-[56px] text-primary-foreground leading-tight mb-5 font-display">
-            Admission 2025-26 Open at
+            Admission 2026-27 Open at
             <span className="block text-secondary mt-2">
               Bharathidasan College (Autonomous)
             </span>
@@ -97,7 +97,7 @@ const HeroSection = () => {
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-2 mb-2">
               <GraduationCap className="w-7 h-7 text-primary" strokeWidth={1.5} />
-              <h2 className="text-2xl lg:text-3xl text-primary font-display">Apply for Admission 2025-26</h2>
+              <h2 className="text-2xl lg:text-3xl text-primary font-display">Apply for Admission 2026-27</h2>
             </div>
             <p className="text-muted-foreground font-body text-sm">Get instant admission details, course information & scholarship eligibility</p>
           </div>

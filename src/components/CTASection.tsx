@@ -18,7 +18,7 @@ const CTASection = () => (
           href="#apply"
           className="bg-primary text-primary-foreground px-10 py-4 rounded-full font-bold text-base font-body hover:-translate-y-1 hover:shadow-xl transition-all"
         >
-          Apply Now for 2025-26
+          Apply Now for 2026-27
         </a>
         <a
           href="tel:+91 99523 17770"

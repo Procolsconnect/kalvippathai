@@ -23,7 +23,7 @@ const TopBar = () => (
       </div>
       <div className="flex items-center gap-2 font-bold">
         <GraduationCap className="w-4 h-4" strokeWidth={1.5} />
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJ8N-zgjLuzZrj1q4CCmm3P3fXc4m6Ed2wHZAW50bL02WXlg/viewform?usp=publish-editor">   <span> Admissions Open 2025-26</span> </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJ8N-zgjLuzZrj1q4CCmm3P3fXc4m6Ed2wHZAW50bL02WXlg/viewform?usp=publish-editor">   <span> Admissions Open 2026-27</span> </a>
       </div>
     </div>
   </div>

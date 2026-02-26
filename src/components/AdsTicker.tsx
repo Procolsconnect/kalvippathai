@@ -25,7 +25,7 @@ const AdsTicker = () => {
     },
     {
       badge: "MAIL",
-      text: "kathirvel64@gmail.com",
+      text: "kalvippaathai@gmail.com",
     },
   ];
 

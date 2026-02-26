@@ -8,12 +8,12 @@ const stats = [
 ];
 
 const companyLogos = [
-  { name: "TCS", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/250px-Tata_Consultancy_Services_Logo.svg.png" },
+  { name: "TCS", url: "/Tata.png" },
   { name: "Wipro", url: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" },
   { name: "Infosys", url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" },
   { name: "Cognizant", url: "https://www.google.com/s2/favicons?domain=cognizant.com&sz=128" },
   { name: "Accenture", url: "https://www.google.com/s2/favicons?domain=accenture.com&sz=128" },
-  { name: "HCL", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/HCL_Technologies_Logo_%28brand_refresh_2022%29.svg/250px-HCL_Technologies_Logo_%28brand_refresh_2022%29.svg.png" },
+  { name: "HCL", url: "/HCL.png" },
   { name: "ICICI Bank", url: "https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" },
   { name: "HDFC Bank", url: "https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" },
   { name: "Amazon", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },

@@ -9,7 +9,7 @@ const categories = [
     logos: [
       {
         name: "TCS", link: "https://www.tcs.com", abbr: "TCS", color: "#1a1a4b",
-        logo: "https://www.google.com/s2/favicons?domain=tcs.com&sz=128"
+        logo: "/Tata.png"
       },
       {
         name: "Infosys", link: "https://www.infosys.com", abbr: "INFY", color: "#007cc2",
@@ -29,7 +29,7 @@ const categories = [
       },
       {
         name: "HCL Tech", link: "https://www.hcltech.com", abbr: "HCL", color: "#0069b4",
-        logo: "https://www.google.com/s2/favicons?domain=hcltech.com&sz=128"
+        logo: "/HCL.png"
       },
       {
         name: "Capgemini", link: "https://www.capgemini.com", abbr: "CGI", color: "#003399",
@@ -48,12 +48,12 @@ const categories = [
         logo: "https://www.google.com/s2/favicons?domain=mphasis.com&sz=128"
       },
       {
-        name: "Tech Mahindra", link: "https://www.techmahindra.com", abbr: "TM", color: "#e5002b",
-        logo: "https://www.google.com/s2/favicons?domain=techmahindra.com&sz=128"
+        name: "Tech Mahindra", link: "https://www.techmahindra.com", abbr: "TM", color: "#ffffffff",
+        logo: "/tm.png"
       },
       {
-        name: "LTI Mindtree", link: "https://www.ltimindtree.com", abbr: "LTI", color: "#004c8e",
-        logo: "https://www.google.com/s2/favicons?domain=ltimindtree.com&sz=128"
+        name: "LTI Mindtree", link: "https://www.ltimindtree.com", abbr: "LTI", color: "#ffffffff",
+        logo: "/lti.png"
       },
     ],
   },
@@ -74,8 +74,8 @@ const categories = [
         logo: "https://www.google.com/s2/favicons?domain=axisbank.com&sz=128"
       },
       {
-        name: "SBI", link: "https://www.sbi.co.in", abbr: "SBI", color: "#2e4089",
-        logo: "https://www.google.com/s2/favicons?domain=sbi.co.in&sz=128"
+        name: "SBI", link: "https://www.sbi.co.in", abbr: "SBI", color: "#122261ff",
+        logo: "/sbi.png"
       },
       {
         name: "Kotak Bank", link: "https://www.kotak.com", abbr: "KMB", color: "#ed1c24",
@@ -101,7 +101,7 @@ const categories = [
       },
       {
         name: "Paytm", link: "https://www.paytm.com", abbr: "PTM", color: "#00b9f5",
-        logo: "https://www.google.com/s2/favicons?domain=paytm.com&sz=128"
+        logo: "/Paytm-Logo2.jpg"
       },
     ],
   },
@@ -141,13 +141,13 @@ const LogoCard = ({ logo }: { logo: (typeof categories)[0]["logos"][0] }) => {
     >
       {/* Colored branded icon box with favicon */}
       <div
-        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+        className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
         style={{ backgroundColor: logo.color }}
       >
         <img
           src={logo.logo}
           alt={logo.name}
-          className="w-8 h-8 object-contain"
+          className="w-12 h-12 object-contain"
           onError={(e) => {
             // fallback: show white abbreviation text on brand color bg
             const img = e.currentTarget;
